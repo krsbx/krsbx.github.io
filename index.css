@@ -33,3 +33,62 @@ body{
     color: #ffffff;
     background: #e66767;
 }
+
+.content{
+    margin-top: 50px;
+}
+
+.left-side {
+    padding: 20px 50px;
+    color: #ffffff;
+    display: flex;
+}
+
+.pictures{
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, #e66767, #74b9ff);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: gradient 2s linear infinite;
+}
+
+@keyframes gradient{
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+}
+
+.pictures img{
+    width: 125px;
+    height: 125px;
+    display: block;
+    border-radius: 50%;
+}
+
+.profile-card{
+    padding: 50px;
+    text-align: center;
+}
+
+.profile-name{
+    font-size: 25px;
+    font-weight: 450;
+    margin: 15px;
+}
+
+.desc{
+    font-size: 20px;
+    font-weight: 650;
+    color: #e66767;
+}
