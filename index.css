@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: url('wallpaper.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+}
+
+.topBar{
+    width: 100vh;
+    padding: 12px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background: #183241;
+}
+
+.topBar span a{
+    padding: 10px 20px;
+    border: 2px solid #e66767;
+    color: #e66767;
+    transition: .3s linear;
+}
+
+.topBar span a:hover{
+    color: #ffffff;
+    background: #e66767;
+}
