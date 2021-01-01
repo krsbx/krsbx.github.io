@@ -93,23 +93,6 @@
     color: #e66767;
 }
 
-.sticky{
-    background-color: #ffffff;
-    padding: 18px 0;
-}
-
-.sticky .navbar-menu a{
-    color: #183241;
-    font-size: 15px;
-    font-weight: 600px;
-    margin-left: 40px;
-    transition: .2s linear;
-}
-
-.sticky .navbar-menu a:hover{
-    color: #e66767;
-}
-
 #Home{
     height: 100vh;
     min-height: 500px;
@@ -228,9 +211,3 @@
     background-color: #ffffff;
     color: #183241;
 }
-
-/* @media screen and (max-width: 900px){ 
-    .menu-btn{
-        display: block;
-    }
-} */
