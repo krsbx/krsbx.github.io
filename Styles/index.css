@@ -32,26 +32,38 @@
     padding-left: 60px;
 }
 
-.logo img{
+.logo span{
+    background: linear-gradient(130deg, #e66767, #74b9ff);
     border-radius: 50%;
+    padding: 10px;
+    background-size: 200% 200%;
+    animation: gradient 2s linear infinite;
 }
 
-.logo img:hover{
-    animation: logos 1s linear infinite;
+.logo a{
+    font-family: "vampire_warsitalic", sans-serif;
+    color: #ffffff;
+    padding-right: 5px;
+    font-size: 20px;
+    font-weight: 100;
 }
 
-@keyframes logos{
+.logo a:hover{
+    color: #183241;
+}
+
+@keyframes gradient{
     25%{
-        transform: rotate(90deg);
+        background-position: left bottom;
     }
     50%{
-        transform: rotate(180deg);
+        background-position: right bottom;
     }
     75%{
-        transform: rotate(270deg);
+        background-position: right top;
     }
     100%{
-        transform: rotate(360deg);
+        background-position: left top;
     }
 }
 
