@@ -33,7 +33,7 @@
     <section id="Home">
         <div class="inner-width">
             <div class="content">
-                <h1>Hi! I'm </h1>
+                <h1 id="typedText"></h1>
                 <div class="social-media">
                     <a href="http://github.com/krsbx" class="fab fa-github"></a>
                     <a href="http://twitter.com/krsbx" class="fab fa-twitter"></a>
@@ -45,5 +45,28 @@
             </div>
         </div>
     </section>
+    <script type="text/javascript">
+        var text = ["Hi! I'm KRSBX ", "I'm a Developer "];
+        var i = 0, j = 0;
+        function typing(){
+            if(i < text.length){
+                if(j < text[i].length){
+                    document.getElementById("typedText").innerHTML += text[i][j];
+                    j++;
+                    setTimeout(typing, 150);
+                }else{
+                    document.getElementById("typedText").innerHTML = "";
+                    j = 0;
+                    i++;
+                    typing();
+                }
+            }else{
+                i = 0;
+                typing();
+            }
+        }
+
+        typing();
+    </script>
 </body>
 </html>

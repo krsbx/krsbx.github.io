@@ -130,59 +130,6 @@
     transition: .3s linear;
 }
 
-#Home .content h1::after{
-    content: "";
-    animation: textAnimations 5s linear infinite;
-}
-
-@keyframes textAnimations{
-    5%{
-        content: "K";
-    }
-    10%{
-        content: "KR";
-    }
-    15%{
-        content: "KRS";
-    }
-    20%{
-        content: "KRSB";
-    }
-    25%{
-        content: "KRSBX";
-    }
-    50%{
-        content: "a";
-    }
-    55%{
-        content: "a D";
-    }
-    60%{
-        content: "a De";
-    }
-    65%{
-        content: "a Dev";
-    }
-    70%{
-        content: "a Deve";
-    }
-    75%{
-        content: "a Devel";
-    }
-    80%{
-        content: "a Develo";
-    }
-    85%{
-        content: "a Develop";
-    }
-    90%{
-        content: "a Develope";
-    }
-    95%{
-        content: "a Developer";
-    }
-}
-
 #Home .content h1:hover{
     color: #183241;
 }
