@@ -200,11 +200,11 @@
     color: #183241;
 }
 
-.circulum-vitae{
+.curriculum-vitae{
     margin-top: 30px;
 }
 
-.circulum-vitae a{
+.curriculum-vitae a{
     display: inline-block;
     border: 2px solid #ffffff;
     color: #ffffff;
@@ -217,7 +217,7 @@
     transition: .3s linear;
 }
 
-.circulum-vitae a:hover{
+.curriculum-vitae a:hover{
     background-color: #ffffff;
     color: #183241;
 }
