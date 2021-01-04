@@ -25,14 +25,14 @@
 #CV .pictures{
     background: linear-gradient(130deg, #74b9ff, #e66767);
     background-size: 200% 200%;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50%;
     animation: gradient 2s linear infinite;
 }
 
 #CV .pictures img{
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
 }
 
