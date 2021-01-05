@@ -22,6 +22,17 @@
     text-align: center;
 }
 
+#CV .content{
+    display: block;
+    color: #ffffff;
+}
+
+#CV .side-by-side{
+    display: flex;
+    padding-top: 25px;
+    align-items: center;
+}
+
 #CV .pictures{
     background: linear-gradient(130deg, #74b9ff, #e66767);
     background-size: 200% 200%;
@@ -58,4 +69,77 @@
     color: #e66767;
     font-size: 20px;
     font-weight: 350;
+}
+
+.skill-sections{
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    padding-right: 50px;
+}
+
+.skill-sections .sec-title{
+    color: #e66767;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.skill-sections .skills{
+    color: #ffffff;
+    padding-top: 2px;
+}
+
+.game-dev-exp{
+    border-left: 2px solid #183241;
+}
+
+.experiences{
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.experiences .year{
+    display: flex;
+}
+.experiences .dots{
+    background: #ffffff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.experiences .year-num{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.game-dev-exp .experiences .project{
+    align-items: center;
+    justify-content: center;
+}
+
+.game-dev-exp .experiences .project .company{
+    font-size: 15px;
+    color: #74b9ff;
+    font-weight: 500;
+}
+
+.game-dev-exp .experiences .project .project-name{
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.game-dev-exp .experiences .project .positions{
+    font-size: 15px;
+    color: #e66767;
+    padding-top: 5px;
+    font-weight: 500;
 }
