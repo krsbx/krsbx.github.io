@@ -22,17 +22,7 @@
     text-align: center;
 }
 
-#CV .content{
-    display: block;
-    color: #ffffff;
-}
-
-#CV .side-by-side{
-    display: flex;
-    padding-top: 25px;
-    align-items: center;
-}
-
+/* Card Sections */
 #CV .pictures{
     background: linear-gradient(130deg, #74b9ff, #e66767);
     background-size: 200% 200%;
@@ -51,6 +41,7 @@
     display: flex;
     align-items: center;
     background: #183241;
+    margin: 55px;
     padding: 25px;
     border-radius: 20px;
 }
@@ -71,23 +62,44 @@
     font-weight: 350;
 }
 
+/* Skills and Experiences */
+
+#CV .side-by-side{
+    display: flex;
+    padding-top: 25px;
+    align-items: center;
+}
+
+/* Skill Sections */
+
 .skill-sections{
     align-items: center;
     text-align: left;
-    justify-content: center;
-    padding-right: 50px;
+    display: flex;
 }
 
-.skill-sections .sec-title{
+.skill-sections .skill-header{
     color: #e66767;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 800;
+    padding-right: 20px;
 }
 
 .skill-sections .skills{
     color: #ffffff;
-    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 14px;
+    padding-right: 20px;
 }
+
+.skill-sections .skill-percent{
+    padding-right: 20px;
+    color: #ffffff;
+    padding-bottom: 2px;
+    font-size: 14px;
+}
+
+/* Experiences */
 
 .game-dev-exp{
     border-left: 2px solid #183241;
@@ -106,7 +118,8 @@
 .experiences .year{
     display: flex;
 }
-.experiences .dots{
+
+.year .dots{
     background: #ffffff;
     border-radius: 50%;
     width: 10px;
@@ -115,29 +128,26 @@
     margin-right: 10px;
 }
 
-.experiences .year-num{
+.year .year-num{
     font-size: 15px;
     font-weight: 600;
+    color: #ffffff;
 }
 
-.game-dev-exp .experiences .project{
-    align-items: center;
-    justify-content: center;
-}
-
-.game-dev-exp .experiences .project .company{
+.project-company{
     font-size: 15px;
     color: #74b9ff;
     font-weight: 500;
 }
 
-.game-dev-exp .experiences .project .project-name{
+.project-name{
+    color: #ffffff;
     font-size: 15px;
     font-weight: 600;
     padding-top: 5px;
 }
 
-.game-dev-exp .experiences .project .positions{
+.project-positions{
     font-size: 15px;
     color: #e66767;
     padding-top: 5px;
