@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="Script/Navbar.js"></script>
+    <script src="Script/Typing.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -57,52 +58,5 @@ Fusce convallis lacus nisi. Phasellus sit amet ultricies elit. Sed eu metus port
 
 Sed dignissim tempus ligula et pellentesque. Phasellus id hendrerit ante. Nam non varius est, ut ornare neque. Aenean sit amet blandit ligula, vitae finibus ex. Maecenas tempor interdum magna, at molestie tortor feugiat rutrum. Donec posuere urna non urna luctus, id accumsan enim sagittis. Suspendisse potenti. Maecenas felis ante, consectetur ac metus a, laoreet tristique elit.
     </section>
-    <script type="text/javascript">
-        var typedText = document.getElementById("typedText");
-        var text = ["Hi! I'm KRSBX ", "I'm a Developer "];
-
-        var charIndex = 0, textIndex = 0;
-
-        const textDelay = 150, eraseDelay = 100, newDelay = 1000;
-
-        //Typing Effect
-        function typing(){
-            if(charIndex < text[textIndex].length){
-                //Add each char inside the text into typedText one by one
-                typedText.innerHTML += text[textIndex].charAt(charIndex);
-                charIndex++;
-                //Delay for the next input
-                setTimeout(typing, textDelay);
-            }else{
-                setTimeout(erase, newDelay);
-            }
-        }
-
-        //Erasing Effect
-        function erase(){
-            if(charIndex > 0){
-                //Pop each char inside typedText by removing the latest char
-                typedText.innerHTML = text[textIndex].substr(0, charIndex-1);
-                charIndex--;
-                //Delay for the next step
-                setTimeout(erase, eraseDelay);
-            }else{
-                textIndex++;
-
-                //Check whether all the text already showned or not
-                if(textIndex >= text.length)
-                    textIndex = 0;
-                //Delay for the next input
-                setTimeout(typing, textDelay);
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", function(){
-            //Check whether the page already loaded or not
-            // if so, call typing function
-            if(typedText)
-                setTimeout(typing, newDelay);
-        });
-    </script>
 </body>
 </html>
