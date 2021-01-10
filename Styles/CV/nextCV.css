@@ -78,7 +78,6 @@
 
 .dev-exp{
     padding-bottom: 20px;
-    margin-bottom: 20px;
 }
 
 .project-name a{
@@ -95,6 +94,16 @@
     .game-dev-exp .experiences{
         padding-left: 20px;
         padding-right: 20px;
+        padding-top: 20px;
+    }
+
+    #nextCV .inner-width{
+        flex-direction: column;
+    }
+
+    #project-periode:not(:first-child){
+        padding-left: 0px;
+        border-top: 2px solid #183241;
         padding-top: 20px;
     }
 }
