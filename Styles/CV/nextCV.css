@@ -1,0 +1,100 @@
+/* One Experiences */
+
+.game-dev-exp{
+    border-left: 2px solid #183241;
+}
+
+.experiences{
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.experiences .project-year{
+    display: flex;
+}
+
+.project-year .dots{
+    background: #ffffff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.project-year .years{
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.project-company{
+    font-size: 15px;
+    color: #74b9ff;
+    text-shadow: 1px 0px 10px #183241;
+    font-weight: 500;
+}
+
+.project-name{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.project-positions{
+    font-size: 15px;
+    color: #e66767;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+/* All Experiences */
+
+#nextCV{
+    height: 100vh;
+    min-height: 500px;
+    background: url('../../Images/wallpaper.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#nextCV .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#project-periode:not(:first-child){
+    padding-left: 50px;
+}
+
+.dev-exp{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.project-name a{
+    color: #ffffff;
+}
+
+@media screen and (max-width:980px){
+    .game-dev-exp{
+        border-top: 2px solid #183241;
+        border-left: 0px;
+        margin-left: 20px;
+    }
+
+    .game-dev-exp .experiences{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+}
