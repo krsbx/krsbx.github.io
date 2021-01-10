@@ -97,6 +97,11 @@
         padding-top: 20px;
     }
 
+    .dev-exp .experiences{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     #nextCV .inner-width{
         flex-direction: column;
     }

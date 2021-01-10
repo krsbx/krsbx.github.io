@@ -39,9 +39,10 @@
 
 #CV .profile-card{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background: #183241;
-    margin: 55px;
+    margin: auto;
     padding: 25px;
     border-radius: 20px;
 }
