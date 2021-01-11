@@ -59,9 +59,6 @@
 #nextCV{
     height: 100vh;
     min-height: 500px;
-    background: url('../../Images/wallpaper.jpg') no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 #nextCV .inner-width{
