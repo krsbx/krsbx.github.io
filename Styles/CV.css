@@ -104,6 +104,12 @@
 }
 
 @media screen and (max-width:980px){
+    #Page{
+        background: url('../Images/mobile_wallpaper.jpg') no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     #CV .side-by-side{
         flex-direction: column;
     }
