@@ -1,0 +1,86 @@
+.Profile {
+  height: 100vh;
+  min-height: 500px;
+}
+
+.inner-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.inner-width .profile-card {
+  flex-direction: column;
+  text-align: center;
+  width: 350px;
+  border-width: 20px;
+  overflow: hidden;
+}
+
+#profile-name {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#profile-desc {
+  color: #e66767;
+  font-size: 20px;
+  font-weight: 450;
+}
+
+#card-header {
+  padding: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #183241;
+}
+
+#card-footer {
+  padding: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #ffffff;
+}
+
+.contact-me {
+  display: inline-block;
+  padding: 8px 50px;
+  border: 2px solid #e66767;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  color: #e66767;
+  transition: 0.3s linear;
+}
+
+.contact-me:hover {
+  color: #ffffff;
+  background: #e66767;
+}
+
+.inner-width .profile-name {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.inner-width .profile-desc {
+  color: #e66767;
+  font-size: 20px;
+  font-weight: 450;
+}
+
+.socials a {
+  color: #183241;
+  width: 64px;
+  font-size: 25px;
+  transition: 0.3s linear;
+  margin-bottom: 1rem;
+}
+
+.socials a:hover {
+  font-size: 20px;
+}
