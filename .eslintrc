@@ -10,25 +10,28 @@
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@docusaurus/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["prettier", "@typescript-eslint", "import"],
+  "plugins": ["prettier", "@typescript-eslint", "import", "@docusaurus"],
   "rules": {
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/no-var-requires": "warn",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
     "class-methods-use-this": "off",
+    "global-require": "warn",
     "consistent-return": "off",
     "lines-between-class-members": "off",
-    "import/no-cycle":"warn",
-    "no-plusplus":"off",
+    "import/no-cycle": "warn",
+    "no-plusplus": "off",
     "no-underscore-dangle": "off",
     "no-useless-constructor": "off",
     "no-console": "off",
@@ -36,7 +39,11 @@
     "operator-assignment": "warn",
     "no-restricted-syntax": "off",
     "no-shadow": "warn",
-    "no-continue": "off"
+    "no-continue": "off",
+    "import/no-unresolved": [
+      2,
+      { "ignore": ["^@theme", "^@docusaurus", "^@site"] }
+    ]
   },
   "settings": {
     "import/parsers": {
