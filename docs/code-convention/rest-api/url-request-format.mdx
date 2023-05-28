@@ -1,0 +1,87 @@
+---
+sidebar_position: 1
+---
+
+# URL Request Format
+
+While working on REST API, there is some URL pattern that need to be followed. Some people perefer to use singular while handling a specific resource and some prefer plurals. Therefore, there is such a need to have some sort of format to avoid confusion in the development process. Here is some of the REST API URL format that we recommend.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="url-resource">
+  <TabItem value="create" label="Create a Resource" default>
+
+## Rules
+
+1. use `plurals` for creating a resource
+2. use `POST` method
+
+### URL Example
+
+```js title="src/components/users/route.js"
+app.post('/users', users.createUserMw);
+```
+
+  </TabItem>
+
+  <TabItem value="gets" label="Get all Resource">
+
+## Rules
+
+1. use `plurals` for getting a resource
+2. use `GET` method
+
+### URL Example
+
+```js title="src/components/users/route.js"
+app.get('/users', users.getUsersMw);
+```
+
+  </TabItem>
+
+  <TabItem value="get" label="Get a Resource">
+
+## Rules
+
+1. use `plurals`+`uid of a resource` for getting a resource
+2. use `GET` method
+
+### URL Example
+
+```js title="src/components/users/route.js"
+app.post('/users/:iud', users.getUserMw);
+```
+
+  </TabItem>
+
+  <TabItem value="update" label="Update a Resource">
+
+## Rules
+
+1. use `plurals`+`uid of a resource` for updating a resource
+2. use `PATCH` method
+
+### URL Example
+
+```js title="src/components/users/route.js"
+app.patch('/users/:iud', users.updateUserMw);
+```
+
+  </TabItem>
+
+  <TabItem value="delete" label="Delete a Resource">
+
+## Rules
+
+1. use `plurals`+`uid of a resource` for deleting a resource
+2. use `DELETE` method
+
+### URL Example
+
+```js title="src/components/users/route.js"
+app.delete('/users/:iud', users.deleteUserMw);
+```
+
+  </TabItem>
+</Tabs>
