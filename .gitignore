@@ -1,17 +1,14 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+/node_modules
 
-# dependencies
-/Build Assets/React/node_modules
-/Build Assets/React/.pnp
-.pnp.js
+# Production
+/build
 
-# testing
-/coverage
+# Generated files
+.docusaurus
+.cache-loader
 
-# production
-/Build Assets/React/build
-
-# misc
+# Misc
 .DS_Store
 .env.local
 .env.development.local
