@@ -1,0 +1,173 @@
+---
+sidebar_position: 2
+---
+
+# Custom Hook
+
+Custom hook is a hook that use an existing react hook that has been tweak to become a new hook by combining multiple hooks. Here some example of the hook that I usually use in my own projects.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="custom-hooks">
+  <TabItem value="useTimeout" label="useTimeout.tsx" default>
+
+```ts
+import { useRef, useEffect, useCallback } from 'react';
+
+const useTimeout = (callback: () => void, delay: number) => {
+  const callbackRef = useRef(callback);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+
+  const set = useCallback(() => {
+    timeoutRef.current = setTimeout(() => callbackRef.current(), delay);
+  }, [delay]);
+
+  const clear = useCallback(() => {
+    timeoutRef.current && clearTimeout(timeoutRef.current);
+  }, []);
+
+  useEffect(() => {
+    set();
+    return clear();
+  }, [delay, set, clear]);
+
+  const reset = useCallback(() => {
+    clear();
+    set();
+  }, [clear, set]);
+
+  return { reset, clear };
+};
+
+export default useTimeout;
+```
+
+  </TabItem>
+  <TabItem value="useDebounce" label="useDebounce.tsx">
+
+```ts
+import { useEffect } from 'react';
+import useTimeout from './useTimeout';
+
+const useDebounce = (
+  callback: () => void,
+  dependencies: unknown[],
+  delay: number = 300
+) => {
+  const { reset, clear } = useTimeout(callback, delay);
+
+  useEffect(reset, [...dependencies, reset]);
+  useEffect(clear, []); // eslint-disable-line react-hooks/exhaustive-deps
+};
+
+export default useDebounce;
+```
+
+  </TabItem>
+  <TabItem value="useOnHover" label="useOnHover.tsx">
+
+```ts
+import React, { useEffect } from 'react';
+
+const useOnHover = (
+  ref: React.RefObject<HTMLElement> | React.MutableRefObject<HTMLElement>,
+  onHover: () => void,
+  onHoverLeave: () => void,
+  isLoaded: boolean = true
+) => {
+  useEffect(() => {
+    if (!ref.current) return;
+
+    ref.current?.addEventListener('mouseover', onHover);
+    ref.current?.addEventListener('mouseout', onHoverLeave);
+
+    return () => {
+      if (!ref.current) return;
+
+      ref.current.removeEventListener('mouseover', onHover);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      ref.current.removeEventListener('mouseout', onHoverLeave);
+    };
+  }, [isLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
+};
+
+export default useOnHover;
+```
+
+</TabItem>
+
+<TabItem value="useWidthHeightObserver" label="useWidthHeightObserver.tsx">
+
+```ts
+import React, { useEffect, useState } from 'react';
+
+const useWidthHeightObserver = (
+  ref: React.RefObject<HTMLElement> | React.MutableRefObject<HTMLElement>,
+  type: 'height' | 'width',
+  cb?: (widthHeight: number) => void
+) => {
+  const [value, setValue] = useState(0);
+
+  // Effect to listen changing width/height on a component
+  useEffect(() => {
+    const observer = new ResizeObserver(([entry]) => {
+      const value = entry.contentRect[type];
+
+      setValue(value);
+      cb?.(value);
+    });
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      if (ref.current) observer.unobserve(ref.current);
+    };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return value;
+};
+
+export default useWidthHeightObserver;
+```
+
+</TabItem>
+
+<TabItem value="useIsInViewPort" label="useIsInViewport.tsx">
+
+```ts
+import React, { useEffect, useState } from 'react';
+
+const useIsInViewport = (
+  ref: React.MutableRefObject<HTMLElement> | React.RefObject<HTMLElement>
+) => {
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsInView(entry.isIntersecting);
+    });
+
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref.current]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return isInView;
+};
+
+export default useIsInViewport;
+```
+
+</TabItem>
+
+</Tabs>

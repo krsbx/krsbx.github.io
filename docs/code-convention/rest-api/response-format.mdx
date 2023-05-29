@@ -4,10 +4,15 @@ sidebar_position: 2
 
 # Response Format
 
-<details>
-<summary>Create/Update/Get a Resource</summary>
+While working on REST API, there is such a need to have some kind of format for some kind of request. By having a response format, the response of the request can be handled easily since we knew that the response will have the expected object structures.
 
-```json title="Create/Update/Get Example"
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="response-format">
+  <TabItem value="create" label="Create a Resource" default>
+
+```bash title="Create/Update/Get Example"
 {
   "code": 200,
   "status": "OK",
@@ -18,7 +23,7 @@ sidebar_position: 2
 }
 ```
 
-```json title="Create/Update/Get JSON Schema"
+```bash title="Create/Update/Get JSON Schema"
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -39,12 +44,11 @@ sidebar_position: 2
 }
 ```
 
-</details>
+  </TabItem>
 
-<details>
-<summary>Get all Resource</summary>
+  <TabItem value="gets" label="Get Multiple Resource">
 
-```json title="Get Example"
+```bash title="Get Multiple Resource Example"
 {
   "code": 200,
   "status": "OK",
@@ -63,7 +67,7 @@ sidebar_position: 2
 }
 ```
 
-```json title="Get JSON Schema"
+```bash title="Get Multiple Resource JSON Schema"
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -107,12 +111,10 @@ sidebar_position: 2
 }
 ```
 
-</details>
+  </TabItem>
+  <TabItem value="erorrs" label="Error">
 
-<details>
-<summary>Error</summary>
-
-```json title="Error Example 1"
+```bash title="Error Example 1"
 {
   "code": 500,
   "status": "Internal Server Error",
@@ -120,7 +122,7 @@ sidebar_position: 2
 }
 ```
 
-```json title="Error Example 2"
+```bash title="Error Example 2"
 {
   "code": 400,
   "status": "Bad Request",
@@ -132,7 +134,7 @@ sidebar_position: 2
 }
 ```
 
-```json title="Error JSON Schema"
+```bash title="Error JSON Schema"
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
@@ -151,4 +153,5 @@ sidebar_position: 2
 }
 ```
 
-</details>
+  </TabItem>
+</Tabs>

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -64,9 +63,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'KRSBX',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'KRSBX Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -78,7 +77,7 @@ const config = {
           },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/krsbx',
             label: 'GitHub',
             position: 'right',
           },
@@ -92,24 +91,20 @@ const config = {
             items: [
               {
                 label: 'Code Convention',
-                to: '/docs/code-convention/intro',
+                to: '/docs/category/code-convention',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Social Media',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/muhammad-firdaus-sati-7a0b541b6/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Instagram',
+                href: 'https://instagram.com/krs.bx',
               },
             ],
           },
@@ -122,12 +117,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/krsbx',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} KRSBX. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
