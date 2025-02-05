@@ -2,10 +2,11 @@
 module.exports = {
   title: 'My Portfolio',
   tagline: 'A React-based static github website template.',
-  url: 'https://github.com',
+  url: 'https://krsbx.github.io/',
   baseUrl: '/',
   organizationName: 'krsbx', // Usually your GitHub org/user name.
-  projectName: '', // Usually your repo name.
+  projectName: 'krsbx.github.io', // Usually your repo name.
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
