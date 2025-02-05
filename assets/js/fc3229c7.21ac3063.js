@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkporto=self.webpackChunkporto||[]).push([[196],{1384:e=>{e.exports=JSON.parse('{"pageTitle":"My Site","pageDescription":"About me."}')}}]);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>My Portfolio Blog</title>
+        <link>https://krsbx.github.io/blog</link>
+        <description>My Portfolio Blog</description>
+        <lastBuildDate>Tue, 22 Jun 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Hello World!]]></title>
+            <link>https://krsbx.github.io/blog/blog-example</link>
+            <guid>blog-example</guid>
+            <pubDate>Tue, 22 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Blogs, are also available while using docusaurus-portfolio! Combine an about me page with a blog to make a cool personal website.]]></description>
+        </item>
+    </channel>
+</rss>

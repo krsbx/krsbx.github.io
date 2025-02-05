@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://krsbx.github.io/blog</id>
+    <title>My Portfolio Blog</title>
+    <updated>2021-06-22T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://krsbx.github.io/blog"/>
+    <subtitle>My Portfolio Blog</subtitle>
+    <icon>https://krsbx.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Hello World!]]></title>
+        <id>blog-example</id>
+        <link href="https://krsbx.github.io/blog/blog-example"/>
+        <updated>2021-06-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Blogs, are also available while using docusaurus-portfolio! Combine an about me page with a blog to make a cool personal website.]]></summary>
+        <author>
+            <name>Nick Silva</name>
+            <uri>https://github.com/silva-nick</uri>
+        </author>
+    </entry>
+</feed>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkporto=self.webpackChunkporto||[]).push([[267],{8289:l=>{l.exports=JSON.parse('{"/blog/tags/hello":{"allTagsPath":"/blog/tags","slug":"/blog/tags/hello","name":"hello","count":1,"permalink":"/blog/tags/hello"},"/blog/tags/blog":{"allTagsPath":"/blog/tags","slug":"/blog/tags/blog","name":"blog","count":1,"permalink":"/blog/tags/blog"}}')}}]);
