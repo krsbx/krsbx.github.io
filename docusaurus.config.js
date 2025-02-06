@@ -55,10 +55,10 @@ module.exports = {
               label: 'About me',
               to: '/docs/about',
             },
-            // {
-            //   label: 'Timeline',
-            //   to: '/docs/timeline',
-            // },
+            {
+              label: 'Timeline',
+              to: '/docs/timeline',
+            },
             {
               label: 'Blog',
               to: '/blog',
@@ -80,7 +80,7 @@ module.exports = {
         pageTitle: 'My Site',
         pageDescription: 'About me.',
         userOptions: {
-          fullname: 'Muhammad Firdaus Sati'
+          fullname: 'Muhammad Firdaus Sati',
         },
         repoOptions: {
           type: 'public',
@@ -99,14 +99,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/krsbx/krsbx.github.io/edit/master/',
+          editUrl: 'https://github.com/krsbx/krsbx.github.io/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/krsbx/krsbx.github.io/edit/master/blog/',
+          editUrl: 'https://github.com/krsbx/krsbx.github.io/edit/master/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
