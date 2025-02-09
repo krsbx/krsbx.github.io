@@ -43,7 +43,8 @@
     "import/no-unresolved": [
       2,
       { "ignore": ["^@theme", "^@docusaurus", "^@site"] }
-    ]
+    ],
+    "prettier/prettier": "off"
   },
   "settings": {
     "import/parsers": {
